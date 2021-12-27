@@ -2,7 +2,11 @@ version: 0.2
 env: 
   parameter-store: 
     API_ROOT: '/Mohan/API_ROOT'
+    
 phases: 
+  install: 
+    commands: 
+      - echo entered into install phase
   pre_build: 
     commands: 
       - echo 'entered into pre_build phase'
