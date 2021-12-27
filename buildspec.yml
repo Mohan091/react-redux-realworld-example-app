@@ -1,8 +1,5 @@
 version: 0.2
-env: 
-  parameter-store: 
-    API_ROOT: '/Mohan/API_ROOT'
-    
+   
 phases: 
   install: 
     commands: 
@@ -14,7 +11,7 @@ phases:
   build: 
     commands: 
       - echo 'entered into build phase'  
-      - sed -i 's/conduit.productionready.io/'$API_ROOT'/' src/agent.js
+      - sed -i 's/conduit.productionready.io/backend_IP:3000/' src/agent.js
 
   post_build: 
     commands: 
