@@ -1,7 +1,7 @@
 version: 0.2
 env: 
   parameter-store: 
-    API_ROOT: "/Mohan/API_ROOT"
+    API_ROOT: '/Mohan/API_ROOT'
 phases: 
   pre_build: 
     commands: 
