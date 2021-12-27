@@ -1,0 +1,21 @@
+version: 0.2
+env: 
+  parameter-store: 
+    - API_ROOT: "/Mohan/API_ROOT"
+
+phases: 
+  pre_build: 
+    commands: 
+      - echo 'entered into pre_build phase'
+
+  build: 
+    commands: 
+      - echo 'entered into build phase'  
+      - sed -i 's/conduit.productionready.io/'$API_ROOT'/' src/agent.js
+
+  post_build: 
+    commands: 
+       - echo 'entered into post_build phase'    
+
+artifacts: 
+  files: '**/*'         
